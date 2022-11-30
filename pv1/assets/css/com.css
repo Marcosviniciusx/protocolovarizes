@@ -17,14 +17,33 @@
   }
 }
 
-* {
-  font-family: helvetica, arial, sans-serif;
-}
-
 body {
   font-size: 16px;
+  
 }
+  .font-weight{
+  color: #d8e9e1;
 
+  }
+.container{
+  padding-top: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+}
+.my-4{
+  font-family: sans-serif;
+  color: #ffffff;
+  font-size: 20PX;
+  line-height: 1.5;
+ 
+ 
+}
+.my-3{
+  font-family: sans-serif;
+  color: #ffffff;
+  font-size: 20PX;
+}
 .fb-comments {
   border: 1px solid #e9ebee;
   border-radius: 3px;
@@ -229,12 +248,57 @@ tr {
       border-style: solid; 
       width: 100%; padding-left: 0!important; padding-right: 0!important; 
       margin-bottom: 10px; 
-      padding: 22px 44px; border-color: #ff5535; border-width: 0px; 
-      border-radius: 6px; 
-      background: linear-gradient(to bottom, #ff6600 0%, #ff5535 100%); 
-      box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.5); 
+      padding: 22px 44px; border-color: #d8e9e1; border-width: 0px; 
+      border-radius: 10px; 
+      background: linear-gradient(to bottom, rgb(0, 255, 89) 0%, rgb(0, 254, 89) 100%); 
+      box-shadow:inset 0px 5px 5px 0px rgb(0, 255, 55); 
+      position: relative;
       text-decoration: none!important;
     }
+
+    .a-btn::before{
+      pointer-events: none;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #12893c;
+      left: 0;
+      top: 120%;
+      transform: perspective(65px) rotateX(40deg) scale(1, 0.35);
+      filter: blur(65px);
+      opacity: 0.7;
+    }
+    .a-btn::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 20px;
+      background-color: #00ff59;
+      box-shadow: 0 0 15px 5px #00ff59;
+      z-index: -1;
+      opacity: 0;
+      transition: opcity 100ms linear;
+
+    }
+    .a-btn:hover::after,
+    .a-btn:focus::after{
+      opacity: 1;
+       
+    }
+    .a-btn:hover::before
+    .a-btn:focus::before{
+      opacity: 1;
+    }
+.a-btn:hover,
+.a-btn:focus{
+  color: #000;
+  text-shadow: none;
+}
+
     .span-btn {
       text-decoration: none;
       -webkit-font-smoothing: antialiased; 
@@ -266,7 +330,7 @@ tr {
       z-index: 1; 
       margin: .2em 0 -.5em; 
       font-size: 15px; 
-      color: #f5e051; 
+      color: #ff0000; 
       font-family: Cabin; 
       font-weight: bold; 
       font-style: italic;

@@ -306,7 +306,7 @@ tr {
       margin: 0; 
       border: 0; 
       font: inherit;
-    
+      vertical-align: baseline;
       display: block; 
       position: relative; 
       z-index: 1; 
@@ -324,7 +324,7 @@ tr {
       text-align: center;
       padding: 0; border: 0;
       font: inherit; 
-     
+      vertical-align: baseline; 
       display: block; 
       position: relative;
       z-index: 1; 
